@@ -1,0 +1,39 @@
+{
+  "name": "barcode-generator",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "build": "webpack --config webpack.config.js",
+    "electron-build": "electron-builder"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "jsbarcode": "^3.11.6",
+    "jspdf": "^2.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^6.11.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "build": {
+    "appId": "com.barcode.generator",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
